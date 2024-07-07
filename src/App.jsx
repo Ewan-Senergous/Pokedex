@@ -1,6 +1,6 @@
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const pokemonList = [
   {
     name: "bulbasaur",
@@ -22,14 +22,15 @@ const pokemonList = [
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
   },
-
   {
     name: "mew",
   },
 ];
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-
+  useEffect(() => {
+    alert("hello pokemon trainer :)");
+  }, []);
   return (
     <div>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
